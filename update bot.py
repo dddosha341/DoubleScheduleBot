@@ -81,14 +81,14 @@ def format_message(schedule, target_date):
     day_name_ru = DAYS_IN_RUSSIAN.get(day_name_en, day_name_en)  # Перевод на русский
     date_str = target_date.strftime("%d.%m.%Y")  # Дата
 
-    message = f"🎓 Актуальное расписание на {date_str} ({day_name_ru}):\n\n"
+    message = f"**🎓 Актуальное расписание на {date_str} ({day_name_ru}):**\n\n"
 
     for subject in schedule:
         message += (
-            f"{subject['number']}. {subject['name']}\n"
-            f"    Начало: {subject['time']}\n"
-            f"    Место: {subject['place']}\n"
-            f"    Преподаватель: {subject['teacher']}\n\n"
+            f"**{subject['number']}. {subject['name']}**\n"
+            f"    _Начало:_ {subject['time']}\n"
+            f"    _Место:_ {subject['place']}\n"
+            f"    _Преподаватель:_ {subject['teacher']}\n\n"
         )
 
     message += "#расписание #актуальноерасписание"
