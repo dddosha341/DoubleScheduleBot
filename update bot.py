@@ -81,7 +81,7 @@ def format_message(schedule, target_date):
     day_name_ru = DAYS_IN_RUSSIAN.get(day_name_en, day_name_en)  # Перевод на русский
     date_str = target_date.strftime("%d.%m.%Y")  # Дата
 
-    message = f"**🎓 Актуальное расписание на {date_str} ({day_name_ru}):**\n\n"
+    message = f"🎓 **Актуальное расписание на {date_str} ({day_name_ru}):**\n\n"
 
     for subject in schedule:
         message += (
